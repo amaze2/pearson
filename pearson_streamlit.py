@@ -15,7 +15,7 @@ search_terms = search_terms.split()
 
 #set year range / timeline
 start_year = st.sidebar.slider(label="Please choose a start year.", min_value=1828, max_value=1863,step=1)
-end_year = st.sidebar.slider(label="Please choose an end year.", min_value=1879, max_value=1864,step=1)
+end_year = st.sidebar.slider(label="Please choose an end year.", min_value=1829, max_value=1864,step=1)
 years = range(start_year,end_year+1)
 
 years = range(start_year,end_year+1)
