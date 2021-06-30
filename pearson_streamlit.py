@@ -25,6 +25,8 @@ if lem_ans == "Yes":
     pickleIn = open("pearson_lemma.pickle",'rb')
     d_year_text = pickle.load(pickleIn)
     search_terms = [lemmatizer.lemmatize(term.lower()) for term in search_terms if term.isalpha()]
+    for year in years:
+            d_year_text[year] = [word for word in d_year_text[year]]
 
 else:
     pickleIn = open("pearson_raw_no_POS.pickle",'rb')
@@ -34,6 +36,9 @@ else:
         search_terms = [term.lower() for term in search_terms if term.isalpha()]
         for year in years:
             d_year_text[year] = [word.lower() for word in d_year_text[year]]
+    if case_ans == "No":
+        for year in years:
+            d_year_text[year] = [word for word in d_year_text[year]]
 
 #get count of words for each year and get count of appearances of search term in words for each year, norm counts, 
 # and add normed counts to (dict-value: empty list of counts) associated with (dict-key: search term)
