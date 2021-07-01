@@ -4,7 +4,7 @@ nltk.download('wordnet')
 
 lemmatizer = nltk.WordNetLemmatizer()
 
-st.title("DigiCordy: The Union College Concordiensis Analyzer")
+st.title("Pearson/Python: Track Word Use over Time in the Diaries of Jonathan Pearson")
 
 st.sidebar.image("UC_logo_with_date.PMS202.png", width=200)
 
@@ -63,7 +63,7 @@ ax.set_title("Term Frequency in the Pearson Diaries, 1828-1828")
 ax.set_xlabel('year')
 ax.set_ylabel('words per million')
 ax.legend()
-plt.xticks(np.arange(min(years), max(years)+1, 10))
+plt.xticks(np.arange(min(years), max(years)+1, 5))
 st.pyplot(fig)
 
 
