@@ -59,7 +59,7 @@ for year in years:
 fig,ax = plt.subplots(figsize = (15, 10))
 for key_term,val_norm_counts_list in dict_search_terms_counts.items():
     ax.plot(years,val_norm_counts_list,label=key_term)
-ax.set_title(f"Term Frequency in the Pearson Diaries, {start_year}-{end_year}. Missing Years: 1839, 1847-53, 1856, & 1859")
+ax.set_title(f"Term Frequency in the Pearson Diaries, {start_year}-{end_year}. Missing Years: 1839, 1847-53, 1856, & 1859.")
 
 ax.set_xlabel('year')
 ax.set_ylabel('words per million')
