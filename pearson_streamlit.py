@@ -9,7 +9,7 @@ st.title("Pearson/Python: Track Word Use over Time in the Diaries of Jonathan Pe
 st.sidebar.image("UC_logo_with_date.PMS202.png", width=200)
 
 #enter search terms
-search_terms = st.sidebar.text_input("Please enter your search term(s). If entering multiple search terms, please divide them with a space: ")
+search_terms = st.sidebar.text_input("Please enter your search term(s). Search terms = unigram(s) / single word(s) only. If entering multiple search terms, please divide them with a space.")
 search_terms = search_terms.split()
 
 
@@ -59,7 +59,6 @@ for year in years:
 fig,ax = plt.subplots(figsize = (15, 10))
 for key_term,val_norm_counts_list in dict_search_terms_counts.items():
     ax.plot(years,val_norm_counts_list,label=key_term)
-#ax.set_title("Term Frequency in the Pearson Diaries, 1828-1828")
 ax.set_title(f"Term Frequency in the Pearson Diaries, {start_year}-{end_year}")
 
 ax.set_xlabel('year')
@@ -68,6 +67,7 @@ ax.legend()
 plt.xticks(np.arange(min(years), max(years)+1, 5))
 st.pyplot(fig)
 
+st.text("Pearson/Python was created by Adam Mazel, Digital Scholarship and Instruction Librarian, with materials digitized by Schaffer Library")
 
 #Remove Punctuation from (tok,tag)
 # for year in years:
