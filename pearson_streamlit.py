@@ -64,7 +64,7 @@ ax.set_title(title)
 ax.set_xlabel('year')
 ax.set_ylabel('words per million')
 ax.legend()
-plt.xticks(np.arange(min(years), max(years)+1, 1))
+plt.xticks(np.arange(min(years), max(years)+1, 3))
 st.pyplot(fig)
 
 st.text("'Pearson/Python' was created by Adam Mazel, Digital Scholarship and Instruction Librarian, with materials digitized by Schaffer Library and with contributions from Sam de Spuches.")
