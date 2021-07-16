@@ -55,19 +55,19 @@ for year in years:
         else:
             val_term_counts_list.append(norm_count)
 
-# # # #visualize chart
+# visualize chart
 fig,ax = plt.subplots(figsize = (15, 10))
 for key_term,val_norm_counts_list in dict_search_terms_counts.items():
     ax.plot(years,val_norm_counts_list,label=key_term)
-ax.set_title(f"Term Frequency in the Pearson Diaries, {start_year}-{end_year}. Missing Years: 1839, 1847-53, 1856, & 1859.")
-
+title = f"Term Frequency in the Pearson Diaries, {start_year}-{end_year}. Missing Years: 1839, 1847-53, 1856, & 1859."
+ax.set_title(title)
 ax.set_xlabel('year')
 ax.set_ylabel('words per million')
 ax.legend()
-plt.xticks(np.arange(min(years), max(years)+1, 5))
+plt.xticks(np.arange(min(years), max(years)+1, 1))
 st.pyplot(fig)
 
-st.text("'Pearson/Python' was created by Adam Mazel, Digital Scholarship and Instruction Librarian, with materials digitized by Schaffer Library.")
+st.text("'Pearson/Python' was created by Adam Mazel, Digital Scholarship and Instruction Librarian, with materials digitized by Schaffer Library and with contributions from Sam de Spuches.")
 
 #Remove Punctuation from (tok,tag)
 # for year in years:
