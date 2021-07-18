@@ -67,7 +67,7 @@ ax.legend()
 plt.xticks(np.arange(min(years), max(years)+1, 2))
 st.pyplot(fig)
 
-st.text("'Pearson/Python' was created by Adam Mazel, Digital Scholarship and Instruction Librarian, with materials digitized by Schaffer Library and with contributions from Sam de Spuches.")
+st.markdown("'Pearson/Python' was created by [Adam Mazel](https://www.union.edu/schaffer-library/staff-departments/adam-mazel) with materials digitized by [Schaffer Library](https://www.union.edu/schaffer-library) and with contributions from [Sam de Spuches](https://guao32.github.io/).")
 
 #Remove Punctuation from (tok,tag)
 # for year in years:
